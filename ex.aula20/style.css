@@ -1,0 +1,39 @@
+@charset "UTF-8";
+body{
+    background-color: rgb(56, 179, 228);
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+   text-align: center;
+   width: 200px;
+   margin: auto;
+   color: white;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 30px;
+}
+footer{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+select#list{
+    width: 150px;
+}
+div{
+    background-color: rgba(255, 255, 255, 0.897);
+    width: 600px;
+    margin: auto;
+    border-radius: 1%;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.329);
+    height: 200px ;
+}
+select {
+    width: 200px;
+    height: auto;
+}
+
