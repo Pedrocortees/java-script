@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            font-size: 20px;
+            padding: 5px;
+            width: 100px;
+            text-align: center;
+        }
+        button {
+            font-size: 20px;
+            padding: 5px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Verificador de Idade</h1>
+    <input type="number" id="idade" placeholder="Digite sua idade">
+    <button onclick="verificarIdade()">Verificar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function verificarIdade() {
+            const idade = Number(document.getElementById('idade').value);
+            const resultado = document.getElementById('resultado');
+
+            if (idade === 0 || isNaN(idade)) {
+                resultado.textContent = "Por favor, digite uma idade válida!";
+                resultado.style.color = "red";
+            } else if (idade < 18) {
+                resultado.textContent = "Menor de idade";
+                resultado.style.color = "orange";
+            } else {
+                resultado.textContent = "Maior de idade";
+                resultado.style.color = "green";
+            }
+        }
+    </script>
+
+</body>
+</html>
