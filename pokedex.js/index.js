@@ -33,3 +33,4 @@ pokeApi.getPokemons()
             .join('')
     })
     .catch((error) => console.error(error))
+    
