@@ -1,15 +1,19 @@
 const pokemonList = document.getElementById('pokemonList')
 
 function convertPokemonToLi(pokemon) {
+
+    const types = pokemon.types.map(typeInfo => typeInfo.type.name)
+    const mainType = types[0]
+
     return `
-        <li class="pokemon">
+        <li class="pokemon ${mainType}">
             <span class="number">#${pokemon.id}</span>
             <span class="name">${pokemon.name}</span>
 
             <div class="detail">
                 <ol class="types">
-                    ${pokemon.types.map(typeDetail => 
-                        `<li class="type">${typeDetail.type.name}</li>`
+                    ${types.map(type => 
+                        `<li class="type ${type}">${type}</li>`
                     ).join('')}
                 </ol>
 
